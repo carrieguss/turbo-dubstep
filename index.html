@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yelling</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+<header>
+  <h1>Sports.</h1>
+  <h2>All I really want is <span class="emph">sports</span>.</h2>
+  <h2>And in the morning it's <span class="emph">sports</span>.</h2>
+  <h2>Cause in the evening it's <span class="emph">sports.</span></h2>
+  <h2>Back in the day,</h2>
+  <h2>There were these <span class="emph">sports</span> around the way.</h2>
+  <h2>I didn't really want to play.</h2>
+  <h2>But could I watch? They said, "You may."</h2>
+  <h2>There are all kinds and that's OK.</h2>
+  <h2>The games are <span class="emph">"Home"</span> or they're <span class="emph">"Away."</span></h2>
+  <h3>Let's yell about some <span class="emph"><a href="#">sports</a></span> today.</h2>
+</header>
+<!--
+ Major League Baseball: April - October 
+ NFL: September - February 
+ NBA: October - June 
+ NHL: October - June -->
+<div class="bodyWrap">
+  <div class="container clearfix" id="options">
+    <div class="toTheLeftToTheLeft">
+      <div class="sportsWrap">
+        <label for="sport">People seem to be talking about</label>
+            <select name="sport" id="sport">
+              <option value="baseball">baseball.</option>
+              <option value="basketball">basketball.</option>
+              <option value="football">football.</option>
+              <option value="hockey">hockey.</option>
+            </select>
+      </div>
+      <div class="cityWrap">
+        <label for "city">My heart belongs to</label>
+            <select name="city" id="city">
+              <option value="San Francisco">San Francisco.</option>
+              <option value="Tampa Bay">Tampa Bay.</option>
+              <option value="New York City">New York City.</option>
+              <option value="Philadelphia">Philadelphia.</option>
+              <option value="Pittsburgh">Pittsburgh.</option>
+              <option value="DC">Washington, DC.</option>
+              <option value="Chicago">Chicago.</option>
+              <option value="Detroit">Detroit.</option>
+              <option value="LosAngeles">Los Angeles.</option>
+              <option value="Seattle">Seattle.</option>
+              <option value="Toronto">Toronto.</option>
+              <option value="Montreal">Montreal.</option>
+              <option value="The Queen">the Motherf*cking Queen of England.</option>
+            </select>
+      </div>
+      <div class="feelingsYo">
+        <label for="emotion">I want to sound</label>
+            <select name="emotion" id="emotion">
+              <option value="smug">smug.</option>
+              <option value="elated">elated.</option>
+              <option value="furious">furious.</option>
+              <option value="high">high?</option>
+              <option value="smug">fucking STOKED, YO.</option>
+              <option value="pensive">pensive.</option>
+              <option value="indignant">indignant.</option>
+              <option value="weepy">weepy.</option>
+            </select>
+      </div>
+    </div><!-- End of dropdown things -->
+    <button class="result">Start <br>Yelling</button>
+  </div> <!-- End #options container -->
+
+  <div class="container" id="yelling">
+<!--  <p>We here at YELLING ABOUT SPORTS value energy over accuracy. We believe that the emotional, spiritual, and existential truths of SPORTS should take precedent over "facts" or "statistics." Try to yell really loud and with a tone of authority.</p> -->
+  </div> 
+
+  <div id="fuckingShit"></div>
+
+</div> <!-- End bodyWrap container div thing -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="sportsapp.js"></script>
+    
+<!--    <script>
+      function createDropDown(){
+        var source = $('#sport');
+        var selected = source.find("option[selected]");  // get selected <option>
+        var options = $("option", source);  // get all <option> elements
+        // create <dl> and <dt> with selected value inside it
+        $("body").append('<dl id="sport" class="dropdown"></dl>')
+        $("#sport").append('<dt><a href="#">' + selected.text() + 
+            '<span class="value">' + selected.val() + 
+            '</span></a></dt>')
+        $("#sport").append('<dd><ul></ul></dd>')
+        // iterate through all the <option> elements and create UL
+        options.each(function(){
+            $("#sport dd ul").append('<li><a href="#">' + 
+                $(this).text() + '<span class="value">' + 
+                $(this).val() + '</span></a></li>');
+        });
+      }
+
+      $(".dropdown dd ul li a").click(function() {
+          var text = $(this).html();
+          $(".dropdown dt a").html(text);
+          $(".dropdown dd ul").hide();
+          var source = $("#source");
+          source.val($(this).find("span.value").html())
+      });
+
+    </script> --> <!-- Annoyed by dropdown option box styles. Fucking around. -->
+
+  </body>
+</html>
