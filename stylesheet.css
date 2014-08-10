@@ -46,6 +46,11 @@ header {
 .container {
 }
 
+#espnLegal {
+	font-size: 14px;
+	padding-top: 75px;
+}
+
 #options {
 	padding: 20px;
 	border: 2px solid #000;
