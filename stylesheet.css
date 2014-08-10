@@ -67,6 +67,11 @@ header {
 	padding-bottom: 10px;
 }
 
+#fuckingShit {
+	font-size: 14px;
+	padding: 25px 0px;
+}
+
 
 /* 	
 ==================================================================
@@ -144,7 +149,7 @@ a:hover {
 	border-bottom: 2px solid #F20F29;
 }
 
-button.result {
+button#result {
 	background-color: #F20F29;
 	color: #FFF;
 	padding: 25px;

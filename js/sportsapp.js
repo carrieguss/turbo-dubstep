@@ -31,8 +31,8 @@ sportsApp.getInfoBaseball = function() {
 	    },
 	    dataType: 'jsonp',
 	    success: function(data){
-	    	mlbTeams = data.sports[0].leagues[0].teams;
-	    	mlbNortheast = [
+	    	var mlbTeams = data.sports[0].leagues[0].teams;
+	    	var mlbNortheast = [
 	    		mlbTeams[0], // Baltimore Orioles
 	    		mlbTeams[1], // Boston Red Sox
 	    		mlbTeams[9], // New York Yankees
@@ -41,16 +41,16 @@ sportsApp.getInfoBaseball = function() {
 	    		mlbTeams[20], // New York Mets
 	    		mlbTeams[21] // Phillies (Philadelphia)
 	    		];
-	    	mlbNorthwest = [
+	    	var mlbNorthwest = [
 	    		mlbTeams[11], // Seattle Mariners
 	    		mlbTeams[26] // Colorado Rockies (Denver)
 	    	];
-	    	mlbSoutheast = [
+	    	var mlbSoutheast = [
 	    		mlbTeams[14], // Atlanta Braves
 	    		mlbTeams[27], // Miami Marlins
 	    		mlbTeams[29] // Tampa Bay Rays
 	    	];
-	    	mlbSouthwest = [
+	    	var mlbSouthwest = [
 	    		mlbTeams[2], // Los Angeles Angels
 	    		mlbTeams[10], // Oakland Athletics
 	    		mlbTeams[12], // Texas Rangers
@@ -61,7 +61,7 @@ sportsApp.getInfoBaseball = function() {
 	    		mlbTeams[28] // Arizona Diamondbacks
 
 	    	];
-	    	mlbMidwest = [
+	    	var mlbMidwest = [
 	    		mlbTeams[3], // Chicago White Sox
 	    		mlbTeams[4], // Cleveland Indians
 	    		mlbTeams[5], // Detroit Tigers
@@ -75,7 +75,29 @@ sportsApp.getInfoBaseball = function() {
 	    	];
 	    
 	    	console.log(mlbNortheast, mlbNorthwest, mlbSoutheast, mlbSouthwest, mlbMidwest); // Just checking.
-	    	$('#fuckingShit').text(mlbNorthwest[0].name); // This shit works!!!! Need to make a randomizer.
+	    	
+ //   	    var randomNumber = function(number){
+	//	        return Math.floor(Math.random() * number + 1);
+	//		};
+	//		var randomTeamNameNE = function(mlbNortheast){
+	//			var i = randomNumber(mlbNortheast.length);
+	//			var team = mlbNortheast[i-1];
+//				return team.name;
+	//		};
+	//		var randomTeamPlaceNE = function(mlbNortheast){
+	//			var i = randomNumber(mlbNortheast.length);
+	//			var team = mlbNortheast[i-1];
+//				return team.location;
+	//		};
+			var team = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].name;
+			var place = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].location;
+//			$('#result').on('click', function(e) {
+//				event.preventDefault();
+	//			$('#poop').html("I heard the " + team + " pooped in some guy's shower after their game in " + place + ".");
+	//			$('#poop').html("");
+//				$('#poop').html("Did you know the " + team + " are funded by the pope?");
+//			});
+	    	$('#fuckingShit').text("I heard the " + team + " pooped in some guy's shower after their game in " + place + "."); // This shit works!!!! Need to make a randomizer.
 	    
 
 	    } //End success actions. 100% sure I'm not supposed to make everything happen in here, but I can't figure out how the fuck else to do it.
