@@ -74,36 +74,16 @@ sportsApp.getInfoBaseball = function() {
 	    		mlbTeams[23] // St. Louis Cardinals
 	    	];
 	    
-	    	console.log(mlbNortheast, mlbNorthwest, mlbSoutheast, mlbSouthwest, mlbMidwest);
+	    	console.log(mlbNortheast, mlbNorthwest, mlbSoutheast, mlbSouthwest, mlbMidwest); // Just checking.
 	    	$('#fuckingShit').text(mlbNorthwest[0].name); // This shit works!!!! Need to make a randomizer.
-	    }
-	//    success: function(response){
-	  //  	console.log(response.sports[0].leagues[0].teams);
-	  //  	sportsApp.displayInfoBaseball(response.sports[0].leagues[0].teams);
-//	    	sportsApp.displayTeams(response.sports[0].leagues[0].teams);
-//	    }
+	    
 
- 	});
-}
+	    } //End success actions. 100% sure I'm not supposed to make everything happen in here, but I can't figure out how the fuck else to do it.
 
-//sportsApp.displayCities = function(data) {
-//sportsApp.displayInfoBaseball = function(data) {
-//	$.each(data, function(i, team) {
-//		var city = $('<h2>').text(team.location);
-//		var teamName = $('<p>').text(team.name);
-//		var combo = $('<div>').append(city, teamName);
-//		$('#fuckingShit').append(combo);
-//	});
-//}
+ 	}); // End of AJAX request...
+} // End of baseball thinger
 
-//sportsApp.displayTeams = function(data) {
-//	$.each(data, function(i, team) {
-//		var city = $('<h2>').text(team.location);
-//		var teamName = $('<p>').text(team.name);
-//		var combo = $('<div>').append(city, teamName);
-//		$('#fuckingShit').append(teamName);
-//	});
-//}
+
 
 sportsApp.getInfoBasketball = function() {
 	$.ajax({
@@ -141,3 +121,32 @@ sportsApp.getInfoBasketball = function() {
 $(function() {
 	sportsApp.init();
 });
+
+// HERE'S A BUNCH OF SHIT I'M NOT USING ANYMORE BUT DON'T WANT TO DELETE BECAUSE WHAT IF I NEED IT LAAATERRRRRR
+// ============================================================================================================
+
+//sportsApp.displayCities = function(data) {
+//sportsApp.displayInfoBaseball = function(data) {
+//	$.each(data, function(i, team) {
+//		var city = $('<h2>').text(team.location);
+//		var teamName = $('<p>').text(team.name);
+//		var combo = $('<div>').append(city, teamName);
+//		$('#fuckingShit').append(combo);
+//	});
+//}
+
+//sportsApp.displayTeams = function(data) {
+//	$.each(data, function(i, team) {
+//		var city = $('<h2>').text(team.location);
+//		var teamName = $('<p>').text(team.name);
+//		var combo = $('<div>').append(city, teamName);
+//		$('#fuckingShit').append(teamName);
+//	});
+//}
+	
+//    success: function(response){
+//  	console.log(response.sports[0].leagues[0].teams);
+//  	sportsApp.displayInfoBaseball(response.sports[0].leagues[0].teams);
+//	    	sportsApp.displayTeams(response.sports[0].leagues[0].teams);
+//	    }
+
