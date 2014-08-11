@@ -4,10 +4,9 @@ var sportsApp = {};
 
 sportsApp.key = "ak5wszy8vyct8hfpjcuu2yj8";
 
-sportsApp.init = function(e) {
-	event.preventDefault();
-	$('form').on('submit', function(e) {
-      	e.preventDefault();
+sportsApp.init = function() {
+	$('form').on('submit', function(event) {
+      	event.preventDefault();
       	if ($('#sport').val() == "baseball") {
       		sportsApp.getInfoBaseball();
       	} else if ($('#sport').val() == "basketball"){
@@ -73,8 +72,8 @@ sportsApp.getInfoBaseball = function() {
 	    		mlbTeams[23] // St. Louis Cardinals
 	    	];
 	    	
-	    	$('form').on('submit', function(e) {
-    			e.preventDefault();
+	    	$('form').on('submit', function(event) {
+    			event.preventDefault();
 
 	   		if ($('#city').val() == "MW") {
 	    		var team = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].name; // Has to happen on event trigger otherwise it only generates once.
@@ -212,8 +211,8 @@ sportsApp.getInfoBasketball = function() {
 	    		nbaTeams[14] // Milwaukee Bucks
 	    	];
 	    
-	    	$('form').on('submit', function(e) {
-      			e.preventDefault();
+	    	$('form').on('submit', function(event) {
+      			event.preventDefault();
 
 	   		if ($('#city').val() == "MW") {
 	    		var team = nbaMidwest[Math.floor(nbaMidwest.length * Math.random())].name; // Has to happen on event trigger otherwise it only generates once.
@@ -346,8 +345,8 @@ sportsApp.getInfoFootball = function() {
 	    		nflTeams[13], // St. Louis Rams
 	    	];
 
-	    	$('form').on('submit', function(e) {
-      			e.preventDefault();
+	    	$('form').on('submit', function(event) {
+      			event.preventDefault();
 
 	   		if ($('#city').val() == "MW") {
 	    		var team = nflMidwest[Math.floor(nflMidwest.length * Math.random())].name; // Has to happen on event trigger otherwise it only generates once.
@@ -474,8 +473,8 @@ sportsApp.getInfoHockey = function() {
 		    	nhlTeams[24] // Anaheim Ducks
 	    	];
 
-	    	$('form').on('submit', function(e) {
-      			e.preventDefault();
+	    	$('form').on('submit', function(event) {
+      			event.preventDefault();
 
 	   		if ($('#city').val() == "MW") {
 	    		var team = nhlMidwest[Math.floor(nhlMidwest.length * Math.random())].name; // Has to happen on event trigger otherwise it only generates once.
