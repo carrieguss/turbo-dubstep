@@ -149,16 +149,16 @@ a:hover {
 	border-bottom: 2px solid #F20F29;
 }
 
-button#result {
+button#submit {
 	background-color: #F20F29;
 	color: #FFF;
 	padding: 25px;
-	border: 1px solid #333;
+/*	border: 1px solid #333; */
 	border-radius: 15px;
-	box-shadow: 2px 5px 2px #888;
-	font-size: 20px;
-	text-transform: uppercase;
-	text-shadow: 0px 0px 1px #000;
+/*	box-shadow: 2px 5px 2px #888; */
+	font-size: 22px;
+/*	text-transform: uppercase; */
+/*	text-shadow: 0px 0px 1px #000; */
 	font-weight: 500;
 	letter-spacing: 1px;
 	float: right;

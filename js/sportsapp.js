@@ -4,7 +4,8 @@ var sportsApp = {};
 
 sportsApp.key = "ak5wszy8vyct8hfpjcuu2yj8";
 
-sportsApp.init = function() {
+sportsApp.init = function(e) {
+	event.preventDefault();
 
 //	var defaultSport = $('#sport').val();
 
@@ -13,7 +14,7 @@ sportsApp.init = function() {
 //	var defaultFeeling = $('#emotion').val();
 
 	sportsApp.getInfoBaseball();
-//	sportsApp.getInfoBasketball();
+	sportsApp.getInfoBasketball();
 //	sportsApp.getInfoFootball();
 //	sportsApp.getInfoHockey();
 //	sportsApp.generateSentence();
@@ -91,15 +92,31 @@ sportsApp.getInfoBaseball = function() {
 	//		};
 			var team = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].name;
 			var place = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].location;
+
+			var sentence = [
+				one = ["I heard the " + team + " in " + place + " died."],
+				"I heard that too",
+				"Me three"
+			];
+			var placeholder1
 //			$('#result').on('click', function(e) {
 //				event.preventDefault();
 	//			$('#poop').html("I heard the " + team + " pooped in some guy's shower after their game in " + place + ".");
 	//			$('#poop').html("");
 //				$('#poop').html("Did you know the " + team + " are funded by the pope?");
 //			});
-	    	$('#fuckingShit').text("I heard the " + team + " pooped in some guy's shower after their game in " + place + "."); // This shit works!!!! Need to make a randomizer.
-	    
+//	    	$('#fuckingShit').text("I heard the " + team + " pooped in some guy's shower after their game in " + place + "."); // This shit works!!!! Need to make a randomizer.
+	    	
+	    	$('form').on('submit', function(e) {
+      			e.preventDefault();
+      			if ($('#sport').val() == "baseball") {
+      				$('#baseball').html("<p>I love baseball</p>");
+      			} else {
+      				alert(sentence[0]);
+      			}
 
+ //     				$('#poop').append("I heard the " + team + " pooped in some guy's shower after their game in " + place + ".");
+      		});
 	    } //End success actions. 100% sure I'm not supposed to make everything happen in here, but I can't figure out how the fuck else to do it.
 
  	}); // End of AJAX request...
@@ -119,26 +136,126 @@ sportsApp.getInfoBasketball = function() {
 	    success: function(data){
 	    	var nbaTeams = data.sports[0].leagues[0].teams;
 	    	var nbaNortheast = [
-
-	    		];
+	    		nbaTeams[1], // Boston Celtics
+	    		nbaTeams[16], // Brooklyn Nets
+	    		nbaTeams[17], // New York Knicks
+	    		nbaTeams[19], // Philadelphia 76ers
+	    		nbaTeams[27] // Toronto Raptors
+	    	];
 	    	var nbaNorthwest = [
+	    		nbaTeams[6], // Denver Nuggets
+	    		nbaTeams[15], // Minnesota Timberwolves
+	    		nbaTeams[24], // Oklahoma City Thunder
+	    		nbaTeams[21], // Portland Trail Blazers
+	    		nbaTeams[25] // Utah Jazz
 
 	    	];
 	    	var nbaSoutheast = [
-
+	    		nbaTeams[0], // Atlanta Hawks
+	    		nbaTeams[29], // Charlotte Hornets
+	    		nbaTeams[13], // Miami Heat
+	    		nbaTeams[18], // Orlando Magic
+	    		nbaTeams[26] // Washington Wizards (D.C.)
 	    	];
-	    	var nbaSouthwest = [
-
+	    	var nbaPacific = [
+	    		nbaTeams[8], // Golden State Warriors (Oakland, CA)
+	    		nbaTeams[11], // Los Angeles Clippers
+	    		nbaTeams[12], // Los Angeles Lakers
+	    		nbaTeams[20], // Phoenix Suns (AZ)
+	    		nbaTeams[22] // Sacramento Kings (CA)
+	    	];
+	    	var nbaSouth = [
+	    		nbaTeams[5], // Dallas Mavericks
+	    		nbaTeams[9], // Houston Rockets
+	    		nbaTeams[28], // Memphis Grizzlies
+	    		nbaTeams[2], // New Orleans Pelicans
+	    		nbaTeams[23] // San Antonio Spurs
 	    	];
 	    	var nbaMidwest = [
-
+	    		nbaTeams[3], // Chicago Bulls
+	    		nbaTeams[4], // Cleveland Cavaliers
+	    		nbaTeams[7], // Detroit Pistons
+	    		nbaTeams[10], // Indiana Pacers
+	    		nbaTeams[14] // Milwaukee Bucks
 	    	];
 	    
-	    	console.log(nbaNortheast, nbaNorthwest, nbaSoutheast, nbaSouthwest, nbaMidwest);
+	    	console.log(nbaNortheast, nbaNorthwest, nbaSoutheast, nbaPacific, nbaSouth, nbaMidwest);
+	    
+			var team = nbaTeams[Math.floor(nbaTeams.length * Math.random())].name;
+			var place = nbaTeams[Math.floor(nbaTeams.length * Math.random())].location;
+
+//	    	$('#fuckingShit').append("Did you know the " + team + " are formally sponsored by the pope? I read it in the New York Times when I was in " + place + "."); // This shit works!!!! Need to make a randomizer.
 	    }
 
  	});
 }
+
+/*
+sportsApp.getInfoFootball = function() {
+	$.ajax({
+	    url: 'http://api.espn.com/v1/sports/football/nfl/teams',
+	    type: 'GET',
+	    data: {
+	    	apikey: sportsApp.key,
+	    	format: 'json',
+	    },
+	    dataType: 'jsonp',
+	    success: function(data){
+	    	var nflTeams = data.sports[0].leagues[0].teams;
+	    	var nflNortheast = [
+	    		nflTeams[], // 
+	    		nflTeams[], //
+	    		nflTeams[], // 
+	    		nflTeams[], // 
+	    		nflTeams[] // 
+	    	];
+	    	var nflNorthwest = [
+	    		nflTeams[], // 
+	    		nflTeams[], // 
+	    		nflTeams[], // 
+	    		nflTeams[], // 
+	    		nflTeams[] // 
+
+	    	];
+	    	var nflSoutheast = [
+				nflTeams[], // 
+	    		nflTeams[], // 
+	    		nflTeams[], // 
+	    		nflTeams[], // 
+	    		nflTeams[] // 
+	    	];
+	    	var nflPacific = [
+				nflTeams[], // 
+	    		nflTeams[], // 
+	    		nflTeams[], // 
+	    		nflTeams[], // 
+	    		nflTeams[] // 
+	    	];
+	    	var nflSouth = [
+				nflTeams[], // 
+	    		nflTeams[], // 
+	    		nflTeams[], // 
+	    		nflTeams[], // 
+	    		nflTeams[] // 
+	    	];
+	    	var nflMidwest = [
+				nflTeams[], // 
+	    		nflTeams[], // 
+	    		nflTeams[], // 
+	    		nflTeams[], // 
+	    		nflTeams[] // 
+	    	];
+	    
+	    	console.log(nflNortheast, nflNorthwest, nflSoutheast, nflPacific, nflSouth, nflMidwest);
+	    
+			var team = nflTeams[Math.floor(nflTeams.length * Math.random())].name;
+			var place = nflTeams[Math.floor(nflTeams.length * Math.random())].location;
+
+	    	$('#fuckingShit').append("Did you know the " + team + " are formally sponsored by the pope? I read it in the New York Times when I was in " + place + "."); // This shit works!!!! Need to make a randomizer.
+	    }
+
+ 	});
+} */
 
 $(function() {
 	sportsApp.init();
