@@ -77,38 +77,15 @@ sportsApp.getInfoBaseball = function() {
 	    
 	    	console.log(mlbNortheast, mlbNorthwest, mlbSoutheast, mlbSouthwest, mlbMidwest); // Just checking.
 	    	
- //   	    var randomNumber = function(number){
-	//	        return Math.floor(Math.random() * number + 1);
-	//		};
-	//		var randomTeamNameNE = function(mlbNortheast){
-	//			var i = randomNumber(mlbNortheast.length);
-	//			var team = mlbNortheast[i-1];
-//				return team.name;
-	//		};
-	//		var randomTeamPlaceNE = function(mlbNortheast){
-	//			var i = randomNumber(mlbNortheast.length);
-	//			var team = mlbNortheast[i-1];
-//				return team.location;
-	//		};
-			var team = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].name;
-			var place = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].location;
-
-			var sentence = [
-				one = ["I heard the " + team + " in " + place + " died."],
-				"I heard that too",
-				"Me three"
-			];
-			var placeholder1
-//			$('#result').on('click', function(e) {
-//				event.preventDefault();
-	//			$('#poop').html("I heard the " + team + " pooped in some guy's shower after their game in " + place + ".");
-	//			$('#poop').html("");
-//				$('#poop').html("Did you know the " + team + " are funded by the pope?");
-//			});
-//	    	$('#fuckingShit').text("I heard the " + team + " pooped in some guy's shower after their game in " + place + "."); // This shit works!!!! Need to make a randomizer.
-	    	
 	    	$('form').on('submit', function(e) {
       			e.preventDefault();
+      			var team = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].name; // Has to happen on event trigger otherwise it only generates once.
+				var place = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].location;
+				var sentence = [
+					zero = ["I heard the " + team + " died in " + place + " in 1972 and now they're all secretly ghosts."], // This took me fucking forever to figure out. I am dumb. 
+					one = ["Are you going to the game on Sunday? We're playing the " + team + "."],
+
+				];
       			if ($('#sport').val() == "baseball") {
       				$('#baseball').html("<p>I love baseball</p>");
       			} else {
@@ -261,6 +238,7 @@ $(function() {
 	sportsApp.init();
 });
 
+//
 // HERE'S A BUNCH OF SHIT I'M NOT USING ANYMORE BUT DON'T WANT TO DELETE BECAUSE WHAT IF I NEED IT LAAATERRRRRR
 // ============================================================================================================
 
@@ -288,4 +266,35 @@ $(function() {
 //  	sportsApp.displayInfoBaseball(response.sports[0].leagues[0].teams);
 //	    	sportsApp.displayTeams(response.sports[0].leagues[0].teams);
 //	    }
+
+	    	
+ //   	    var randomNumber = function(number){
+	//	        return Math.floor(Math.random() * number + 1);
+	//		};
+	//		var randomTeamNameNE = function(mlbNortheast){
+	//			var i = randomNumber(mlbNortheast.length);
+	//			var team = mlbNortheast[i-1];
+//				return team.name;
+	//		};
+	//		var randomTeamPlaceNE = function(mlbNortheast){
+	//			var i = randomNumber(mlbNortheast.length);
+	//			var team = mlbNortheast[i-1];
+//				return team.location;
+	//		};
+//			var team = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].name;
+//			var place = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].location;
+
+//			var sentence = [
+//				zero = ["I heard the " + team + " died in " + place + " in 1972 and now they're all secretly ghosts."],
+//				one = ["Are you going to the game on Sunday? We're playing the " + team + "."],
+//
+//			];
+		
+//			$('#result').on('click', function(e) {
+//				event.preventDefault();
+	//			$('#poop').html("I heard the " + team + " pooped in some guy's shower after their game in " + place + ".");
+	//			$('#poop').html("");
+//				$('#poop').html("Did you know the " + team + " are funded by the pope?");
+//			});
+//	    	$('#fuckingShit').text("I heard the " + team + " pooped in some guy's shower after their game in " + place + "."); // This shit works!!!! Need to make a randomizer.
 
