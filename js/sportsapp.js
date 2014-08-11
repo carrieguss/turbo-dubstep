@@ -74,25 +74,72 @@ sportsApp.getInfoBaseball = function() {
 	    		mlbTeams[22], // Pittsburgh Pirates
 	    		mlbTeams[23] // St. Louis Cardinals
 	    	];
-	    
+
 	    	console.log(mlbNortheast, mlbNorthwest, mlbSoutheast, mlbSouthwest, mlbMidwest); // Just checking.
 	    	
 	    	$('form').on('submit', function(e) {
       			e.preventDefault();
+
+ //     		if ($('#sport').val() == "baseball") &&
+   //   			$('#city').val() == NW) {
+//
+//	    	} else {
+  //    				alert(mad);
+    //  			}
+
+
       			var team = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].name; // Has to happen on event trigger otherwise it only generates once.
 				var place = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].location;
-				var sentence = [
-					zero = ["I heard the " + team + " died in " + place + " in 1972 and now they're all secretly ghosts."], // This took me fucking forever to figure out. I am dumb. 
-					one = ["Are you going to the game on Sunday? We're playing the " + team + "."],
 
-				];
-      			if ($('#sport').val() == "baseball") {
+	    	var highWeepySentence = [
+				zero = ["Did you hear that the " + team + " pooped in some guy's shower after their game in " + place + "? Hey, let's go to McDonald's."], // This took me fucking forever to figure out. I am dumb. 
+				one = ["I heard the " + team + " died in " + place + " in 1972 and now they're all secretly ghosts."],
+				two = ["Do you think the " + team + " ever eat pancakes together? I think it would be so sad if they never ate pancakes together."],
+				three = ["They say it was crazy of the " + team + " to run naked in a loop around the entire geographical area of " + place + ", but 'crazy' is so subjective."],
+				four = ["That ball looks like a soaring eagle. All the " + " are like beautiful soaring eagles. But everything that rises must fall."]
+			];
+			var smugPensiveSentence = [
+				zero = ["According to three peer-reviewed studies, everyone playing for the " + team + " has been injecting steroids. Steroids are bad for you. I read that in another peer reviewed study."],
+				one = ["I can't believe the National League still doesn't allow designated hitters. It's obviously why " + team + " lost the game last night."],
+				two = ["I know the " + team + " won last night but I just feel so much better when I'm doing yoga."],					
+				three = ["Oh, I couldn't make it to the " + team + " game in " + place + ". I was DJing at Monsterkabinett in Berlin. Martha Stewart was there."],
+				four = ["The " + team + " would never be playing New York-style baseball if it weren't for the Civil War."],
+				five = ["I think the " + team + " vs. " + team + " game yesterday was fixed. It was like the dead-ball era all over again."],
+				six = ["I know baseball experts consider their team owner to be perhaps the most influential owner in MLB history, but that should have no bearing on whether the " + team + " win in " + place + " tomorrow."],
+				seven = ["The " + team + " should really invest in better artificial turf. It's throwing off their game."],
+				eight = ["Well of course we won. The " + team + " ALWAYS win. Would you like a sip of my rare, single malt Macallan? It was bottled in 1910. It's spicy AND silky."],
+				nine = ["I'm looking forward to the " + team + " game tomorrow. A pitching revolution would not be unprecedented."],
+				ten = ["It was just dreadful to se the " + team + " lose yesterday. You know their pitcher chose to retire rather than face a 100-game suspension for his second positive steroid test, and I don't think they've recovered emotionally."]
+			];
+			var indignantSentence = [
+				zero = ["Fuck that ump. He was obviously biased towards the " + team +"."],
+				one = ["Did the " + team + " intentionally desecrate the " + team + " logo? That's some next-level shit."],
+				two = ["The " + team + " are a disgrace to this and every city. They're a disgrace to the sport itself."],
+				three = ["The " + team + " would have won if " + place + " wasn't such a miserable fucking city for sporting events."],
+				four = ["Did you see the " + team + " game? What a fucked up call. I watched the slow-mo replay six times."],
+				five = ["The " + team + " are being completely unreasonable in their demands for a post-deadline trade. It's like everyone from " + place + " was raised in a barn."]
+			];
+			var stokedSentence = [
+				zero = ["Bro, I am so fucking stoked that the " + team + " won yesterday."],
+				one = ["Bro, I am so fucking stoked that the " + team + " lost yesterday."],
+				two = ["Bro, I am so fucking stoked that the " + team + " are playing the " + team + " in " + place + " on Sunday."],
+				three = ["Bro, I am so fucking stoked that you live in " + place + " and love the " + team + ". Me too, bro. Me too."],
+				three = ["Bro, the " + team + " cheerleaders are really, really hot."]
+			];
+
+				var cryify = highWeepySentence[Math.floor(highWeepySentence.length * Math.random())];
+				var smuggify = smugPensiveSentence[Math.floor(mlbMidwest.length * Math.random())];
+				var mad = indignantSentence[Math.floor(indignantSentence.length * Math.random())];
+				var yaBro = stokedSentence[Math.floor(stokedSentence.length * Math.random())];
+
+      			if ($('#sport').val() == "baseball") &&
+      				$('')
+      			{
       				$('#baseball').html("<p>I love baseball</p>");
       			} else {
-      				alert(sentence[0]);
+      				alert(mad);
       			}
 
- //     				$('#poop').append("I heard the " + team + " pooped in some guy's shower after their game in " + place + ".");
       		});
 	    } //End success actions. 100% sure I'm not supposed to make everything happen in here, but I can't figure out how the fuck else to do it.
 
