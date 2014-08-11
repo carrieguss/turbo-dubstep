@@ -46,6 +46,7 @@
                 <option value="CALI">California.</option>
                 <option value="NY">New York.</option>
                 <option value="DS">the deep South.</option>
+                <option value="SE">the Southeast.</option>
                 <option value="MW">the Midwest.</option>
                 <option value="NE">the Northeast.</option>
                 <option value="NW">the Northwest.</option>
@@ -78,21 +79,17 @@
 
   <div class="container" id="yelling">
    
-    <div id="baseball">
-      <p>"I HEARD THE JAYS FUCKING KILLED IT IN THE 19TH INNING LAST NIGHT YA WOO GO SPORTS."</p>
+    <div id="yellHere">
+      <p>"I heard the Blue Jays fucking killed it in the 19th Inning YA WOO GO SPORTS."</p>
     </div>
    
-    <div id="basketball"></div>
+    <!-- <div id="basketball"><p></p></div> -->
    
-    <div id="football"></div>
+    <!-- <div id="football"><p></p></div> -->
    
-    <div id="hockey"></div>
+    <!-- <div id="hockey"><p></p></div> -->
 
   </div> 
-
-  <div id="fuckingShit">
-    <p id="poop"></p>
-  </div>
 
   <div id="espnLegal">
     <p>Built with DATA and SPORTS by Carrie Guss using DATA and SPORTS pulled from the <img src="images/espn-red_50.png"> API.</p>
@@ -103,34 +100,5 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/sportsapp.js"></script>
     
-<!--    <script>
-      function createDropDown(){
-        var source = $('#sport');
-        var selected = source.find("option[selected]");  // get selected <option>
-        var options = $("option", source);  // get all <option> elements
-        // create <dl> and <dt> with selected value inside it
-        $("body").append('<dl id="sport" class="dropdown"></dl>')
-        $("#sport").append('<dt><a href="#">' + selected.text() + 
-            '<span class="value">' + selected.val() + 
-            '</span></a></dt>')
-        $("#sport").append('<dd><ul></ul></dd>')
-        // iterate through all the <option> elements and create UL
-        options.each(function(){
-            $("#sport dd ul").append('<li><a href="#">' + 
-                $(this).text() + '<span class="value">' + 
-                $(this).val() + '</span></a></li>');
-        });
-      }
-
-      $(".dropdown dd ul li a").click(function() {
-          var text = $(this).html();
-          $(".dropdown dt a").html(text);
-          $(".dropdown dd ul").hide();
-          var source = $("#source");
-          source.val($(this).find("span.value").html())
-      });
-
-    </script> --> <!-- Annoyed by dropdown option box styles. Fucking around. -->
-
   </body>
 </html>
