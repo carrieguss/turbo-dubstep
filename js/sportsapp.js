@@ -80,16 +80,45 @@ sportsApp.getInfoBaseball = function() {
 	    	$('form').on('submit', function(e) {
       			e.preventDefault();
 
- //     		if ($('#sport').val() == "baseball") &&
-   //   			$('#city').val() == NW) {
-//
-//	    	} else {
-  //    				alert(mad);
-    //  			}
-
-
-      			var team = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].name; // Has to happen on event trigger otherwise it only generates once.
+//     		if ($('#sport').val() == "baseball") &&
+//	   		if ($('#city').val() == "MW") {
+//	    		var team = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].name; // Has to happen on event trigger otherwise it only generates once.
+//				var place = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].location;
+//	    		} else {
+//	    			if ($('#city').val() == "NY" || "NE" || "DC" || "TO" || "MTL" || "CAN" || "DQ") {
+ //    				var team = mlbNortheast[Math.floor(mlbNortheast.length * Math.random())].name; 
+	//				var place = mlbNortheast[Math.floor(mlbNortheast.length * Math.random())].location;
+	  //  			} else {
+	    //				if ($('#city').val() == "CALI" || "TX") {
+	    //				var team = mlbSouthwest[Math.floor(mlbSouthwest.length * Math.random())].name; 
+		//				var place = mlbSouthwest[Math.floor(mlbSouthwest.length * Math.random())].location;
+		  //  			} else {
+//		    				if ($('#city').val() == "DS") {
+//	    					var team = mlbSoutheast[Math.floor(mlbSoutheast.length * Math.random())].name; 
+//							var place = mlbSoutheast[Math.floor(mlbSoutheast.length * Math.random())].location;
+//		    				}
+//		    				else {
+//		    					var team = mlbNorthwest[Math.floor(mlbNorthwest.length * Math.random())].name; 
+//								var place = mlbNorthwest[Math.floor(mlbNorthwest.length * Math.random())].location;
+//		    				}
+//		    			};
+	   		if ($('#city').val() == "MW") {
+	    		var team = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].name; // Has to happen on event trigger otherwise it only generates once.
 				var place = mlbMidwest[Math.floor(mlbMidwest.length * Math.random())].location;
+	    		} else if ($('#city').val() == "NY" || $('#city').val() == "NE" || $('#city').val() == "DC" || $('#city').val() == "TO" || $('#city').val() == "MTL" || $('#city').val() == "CAN" || $('#city').val() == "DQ") {
+     				var team = mlbNortheast[Math.floor(mlbNortheast.length * Math.random())].name; 
+					var place = mlbNortheast[Math.floor(mlbNortheast.length * Math.random())].location;
+	    		} else if ($('#city').val() == "CALI" || $('#city').val() == "TX") {
+	    			var team = mlbSouthwest[Math.floor(mlbSouthwest.length * Math.random())].name; 
+					var place = mlbSouthwest[Math.floor(mlbSouthwest.length * Math.random())].location;
+		    	} else if ($('#city').val() == "DS") {
+	    			var team = mlbSoutheast[Math.floor(mlbSoutheast.length * Math.random())].name; 
+					var place = mlbSoutheast[Math.floor(mlbSoutheast.length * Math.random())].location;
+		    	} else {
+		    		var team = mlbNorthwest[Math.floor(mlbNorthwest.length * Math.random())].name; 
+					var place = mlbNorthwest[Math.floor(mlbNorthwest.length * Math.random())].location;
+	    		};
+	    		
 
 	    	var highWeepySentence = [
 				zero = ["Did you hear that the " + team + " pooped in some guy's shower after their game in " + place + "? Hey, let's go to McDonald's."], // This took me fucking forever to figure out. I am dumb. 
@@ -99,7 +128,7 @@ sportsApp.getInfoBaseball = function() {
 				four = ["That ball looks like a soaring eagle. All the " + " are like beautiful soaring eagles. But everything that rises must fall."]
 			];
 			var smugPensiveSentence = [
-				zero = ["According to three peer-reviewed studies, everyone playing for the " + team + " has been injecting steroids. Steroids are bad for you. I read that in another peer reviewed study."],
+				zero = ["According to three peer-reviewed studies, everyone playing for the " + team + " has been injecting steroids. Steroids are bad for you. I read that in another peer-reviewed study."],
 				one = ["I can't believe the National League still doesn't allow designated hitters. It's obviously why " + team + " lost the game last night."],
 				two = ["I know the " + team + " won last night but I just feel so much better when I'm doing yoga."],					
 				three = ["Oh, I couldn't make it to the " + team + " game in " + place + ". I was DJing at Monsterkabinett in Berlin. Martha Stewart was there."],
@@ -113,7 +142,7 @@ sportsApp.getInfoBaseball = function() {
 			];
 			var indignantSentence = [
 				zero = ["Fuck that ump. He was obviously biased towards the " + team +"."],
-				one = ["Did the " + team + " intentionally desecrate the " + team + " logo? That's some next-level shit."],
+				one = ["Did the " + team + " intentionally desecrate the " + team + " logo? That's some next-level meta shit."],
 				two = ["The " + team + " are a disgrace to this and every city. They're a disgrace to the sport itself."],
 				three = ["The " + team + " would have won if " + place + " wasn't such a miserable fucking city for sporting events."],
 				four = ["Did you see the " + team + " game? What a fucked up call. I watched the slow-mo replay six times."],
@@ -132,13 +161,30 @@ sportsApp.getInfoBaseball = function() {
 				var mad = indignantSentence[Math.floor(indignantSentence.length * Math.random())];
 				var yaBro = stokedSentence[Math.floor(stokedSentence.length * Math.random())];
 
-      			if ($('#sport').val() == "baseball") &&
-      				$('')
-      			{
-      				$('#baseball').html("<p>I love baseball</p>");
+      			if ($('#sport').val() == "baseball" && 
+      				$('#emotion').val() == "smug" || 
+      				$('#emotion').val() == "pensive") {
+      					$('#baseball p').text(smuggify);
+      			} else if ($('#sport').val() == "baseball" && 
+      				$('#emotion').val() == "high" || 
+      				$('#emotion').val() == "weepy") {
+      					$('#baseball p').text(cryify);
+      			} else if ($('#sport').val() == "baseball" && 
+      				$('#emotion').val() == "mad") {
+      					$('#baseball p').text(mad);
+      			} else if ($('#sport').val() == "baseball" && 
+      				$('#emotion').val() == "stoked") {
+      					$('#baseball p').text(stoked);
       			} else {
-      				alert(mad);
-      			}
+      				$('#basketball').html("<p>I love basketball</p>");
+      			};
+
+      	//	$('')
+      //			{
+    //  				$('#baseball').html("<p>I love baseball</p>");
+  //    			} else {
+      		//	alert(mad);
+//      			}
 
       		});
 	    } //End success actions. 100% sure I'm not supposed to make everything happen in here, but I can't figure out how the fuck else to do it.
