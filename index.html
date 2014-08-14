@@ -21,7 +21,7 @@
   <h2>But could I watch? They said, "You may."</h2>
   <h2>There are all kinds and that's OK.</h2>
   <h2>The games are <span class="emph">"Home"</span> or they're <span class="emph">"Away."</span></h2>
-  <h3>Let's yell about some <span class="emph"><a href="#">sports</a></span> today.</h2>
+  <h3>Let's yell about some <span class="emph"><a data-src="images/omgcant.gif">sports</a></span> today.</h2>
 </header>
 <!--
  Major League Baseball: April - October 
@@ -93,13 +93,19 @@
   </div> 
 
   <div id="espnLegal">
-    <p>Built with DATA and SPORTS by Carrie Guss using DATA and SPORTS pulled from the <img src="images/espn-red_50.png"> API.</p>
+    <p>Built with DATA and SPORTS by <a href="http://carrieguss.com" target="_blank">Carrie Guss</a> using DATA and SPORTS pulled from the <img src="images/espn-red_50.png"> API.</p>
   </div>
 
 </div> <!-- End bodyWrap container div thing -->
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/sportsapp.js"></script>
+     <script src="js/gifLinks.js"></script>
+    <script>
+      var elements = document.querySelectorAll( 'header a' );
+      GifLinks( elements );
+    </script>
+
     
   </body>
 </html>

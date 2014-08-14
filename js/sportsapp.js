@@ -151,7 +151,7 @@ sportsApp.getInfoBaseball = function() {
  //     				$('#yellHere p').text("");
       			};
 
-    		});
+    		}); // End submit event
 	    } //End success actions. 100% sure I'm not supposed to make everything happen in here, but I can't figure out how the fuck else to do it.
 
  	}); // End of AJAX request...
@@ -289,7 +289,7 @@ sportsApp.getInfoBasketball = function() {
  //     				$('#yellHere').html("");
       			};
 
-      		});
+      		}); // End form submit event
 	    } // End success function
  	}); // End AJAX request
 }; // End basketball stuff
@@ -374,13 +374,13 @@ sportsApp.getInfoFootball = function() {
 				one = ["I can't believe the NFL still doesn't allow pajama parties. It's obviously why the " + team + " lost the game last night."],
 				two = ["I know the " + team + " won last night but I just feel so much better when I'm doing yoga."],					
 				three = ["Oh, I couldn't make it to the " + team + " game in " + place + ". I was DJing at Monsterkabinett in Berlin. Martha Stewart was there."],
-				four = ["The " + team + " would never be playing New York-style basketball if it weren't for the Civil War."],
+				four = ["The " + team + " would never be playing New York-style football if it weren't for the Civil War."],
 				five = ["I think the " + team + " game yesterday was fixed. It was like Aliens 2 all over again."],
 				six = ["I know football experts consider spoons to be perhaps the most influential utensil in NFL history, but that should have no bearing on whether the " + team + " win in " + place + " tomorrow."],
 				seven = ["The " + team + " should really invest in better showtune soundtracks to play in the " + place + " arena. It's throwing off their game."],
 				eight = ["Well of course we won. The " + team + " ALWAYS win. Would you like a sip of my rare, single malt Macallan? It was bottled in 1910. It's spicy AND silky."],
 				nine = ["I'm looking forward to the " + team + " game tomorrow. A clawing, hair-pulling revolution would not be unprecedented."],
-				ten = ["It was just dreadful to se the " + team + " lose yesterday. You know their point guard chose to retire rather than face a 100-game suspension for his insistence on keeping a small wheel of brie in his pocket, and I don't think they've recovered emotionally."]
+				ten = ["It was just dreadful to se the " + team + " lose yesterday. You know their quarterback chose to retire rather than face a 100-game suspension for his insistence on keeping a small wheel of brie in his pocket, and I don't think they've recovered emotionally."]
 			];
 			var indignantSentence = [
 				zero = ["Fuck that ref. He was obviously biased towards the " + team +"."],
@@ -495,7 +495,7 @@ sportsApp.getInfoHockey = function() {
 				one = ["I heard the " + team + " died in " + place + " in 1972 and now they're all secretly ghosts."],
 				two = ["Do you think the " + team + " ever eat pancakes together? I think it would be so sad if they never ate pancakes together."],
 				three = ["They say it was crazy of the " + team + " to run naked in a loop around the entire geographical area of " + place + ", but 'crazy' is so subjective."],
-				four = ["That puck looks like a swooping salmon. All the " + team + " are like beautiful moose. But everything that I want a fish filet."]
+				four = ["That puck looks like a swooping salmon. All the " + team + " are like beautiful moose. But everything that-- A fish filet. That's what I want! I want a fish filet."]
 			];
 			var smugPensiveSentence = [
 				zero = ["According to three peer-reviewed studies, everyone playing for the " + team + " has been drinking Go-Go Juice. Go-Go Juice is bad for you. I read that in another peer-reviewed study."],
@@ -508,7 +508,7 @@ sportsApp.getInfoHockey = function() {
 				seven = ["The " + team + " should really invest in better showtune soundtracks to play in the " + place + " arena. It's throwing off their game."],
 				eight = ["Well of course we won. The " + team + " ALWAYS win. Would you like a sip of my rare, single malt Macallan? It was bottled in 1910. It's spicy AND silky."],
 				nine = ["I'm looking forward to the " + team + " game tomorrow. A clawing, hair-pulling revolution would not be unprecedented."],
-				ten = ["It was just dreadful to se the " + team + " lose yesterday. You know their point guard chose to retire rather than face a 100-game suspension for his insistence on keeping a small wheel of brie in his pocket, and I don't think they've recovered emotionally."]
+				ten = ["It was just dreadful to se the " + team + " lose yesterday. You know their goalie chose to retire rather than face a 100-game suspension for always insulting people's moms."]
 			];
 			var indignantSentence = [
 				zero = ["Fuck that ref. He was obviously biased towards the " + team +"."],

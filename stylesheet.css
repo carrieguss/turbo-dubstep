@@ -126,7 +126,7 @@ label {
 
 select {
 	-webkit-appearance: none;
-	-moz-appearance: none;
+	-moz-appearance: menulist-text;
 	background-color: #fff;
 	/*color: #DB1414;*/
 	color: #F20F29;
@@ -157,7 +157,7 @@ Link styles, bitches. And buttons! Why not.
 
 a {
 	text-decoration: none;
-	color: inherit;
+	color: #F20F29;
 	border-bottom: 1px dotted #F20F29;
 }
 
